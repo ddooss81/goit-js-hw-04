@@ -1,23 +1,45 @@
-'use strict';
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+// let arreyFinal = [];
+// let arreyFinal1 = [];
+// for (const a in book) {
+//   arreyFinal.push(a);
+//   arreyFinal1.push(book[a]);
+// }
+// console.log(arreyFinal);
+// console.log(arreyFinal1);
 
-function slugify(title) {
-    title.toLowerCase()
-    return title.toLowerCase().replaceAll(" ", "-");
+
+const apartment = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+const values = [];
+const keys = Object.keys(apartment);
+console.log(keys);
+
+for (let a of keys) {
+  values.push(apartment[a]);
+  console.log(values);
 }
-
-console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
-console.log(slugify("English for developer")); // "english-for-developer"
-console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
-console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
+// console.log(keys);
+// console.log(values);
+// console.log(apartment[keys]);
 
 
+// const book = {
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+// const keys = Object.keys(book);
 
-function slugify(title) {
-  title = title.toLowerCase().replace(/\s+/g, '-').replace(/-+/g, '-');
-  return title;
-}
-
-console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
-console.log(slugify("English for developer")); // "english-for-developer"
-console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
-console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
+// for (const key of keys) {
+//   console.log(key); // Ключ
+//   console.log(book[key]); // Значення властивості
+// }
