@@ -10,19 +10,14 @@ function calculateTotalPrice(productName) {
     { name: "Grip", price: 1200, quantity: 9 },
   ];
 
-let index = 0;
-do {
-  for (let product of products) {
-    if (product.name === productName) {
-      return console.log(product.price * product.quantity);
-      
-    }
+  let product = products.find((p) => p.name === productName);
+  if (product) {
+    return product.price * product.quantity;
+  } else {
+    return `Product ${productName} not found!`;
   }
- 
-  index++;
-} while (index < products.length);
-return `Product ${productName} not found!`;
 }
+
 
 console.log(calculateTotalPrice("Blaster"));
 console.log(calculateTotalPrice("Radar"));
