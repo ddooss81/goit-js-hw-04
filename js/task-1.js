@@ -1,45 +1,31 @@
-// const book = {
-//   title: "The Last Kingdom",
-//   author: "Bernard Cornwell",
-//   genres: ["historical prose", "adventure"],
-//   rating: 8.38,
-// };
-// let arreyFinal = [];
-// let arreyFinal1 = [];
-// for (const a in book) {
-//   arreyFinal.push(a);
-//   arreyFinal1.push(book[a]);
-// }
-// console.log(arreyFinal);
-// console.log(arreyFinal1);
+ 'use strict';
 
 
-const apartment = {
-  descr: "Spacious apartment in the city center",
-  rating: 4,
-  price: 2153,
-};
-const values = [];
-const keys = Object.keys(apartment);
-console.log(keys);
 
-for (let a of keys) {
-  values.push(apartment[a]);
-  console.log(values);
+function calculateTotalPrice(productName) {
+  const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+  ];
+
+let index = 0;
+do {
+  for (let product of products) {
+    if (product.name === productName) {
+      return console.log(product.price * product.quantity);
+      
+    }
+  }
+ 
+  index++;
+} while (index < products.length);
+return `Product ${productName} not found!`;
 }
-// console.log(keys);
-// console.log(values);
-// console.log(apartment[keys]);
 
-
-// const book = {
-//   author: "Bernard Cornwell",
-//   genres: ["historical prose", "adventure"],
-//   rating: 8.38,
-// };
-// const keys = Object.keys(book);
-
-// for (const key of keys) {
-//   console.log(key); // Ключ
-//   console.log(book[key]); // Значення властивості
-// }
+console.log(calculateTotalPrice("Blaster"));
+console.log(calculateTotalPrice("Radar"));
+console.log(calculateTotalPrice("Droid"));
+console.log(calculateTotalPrice("Grip"));
+console.log(calculateTotalPrice("Scanner"));
