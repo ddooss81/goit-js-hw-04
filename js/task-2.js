@@ -1,17 +1,20 @@
-`use strict`;
+// `use strict`;
 
-const atTheOldToad = {
-    potions: [],
+// const atTheOldToad = {
+//     potions: [],
 
 
-    getPotions() {
-        return "List of all available potions";
-    },
+//     getPotions() {
+//         return "List of all available potions";
+//     },
 
-    addPotion(potionName) {
-        return `Adding ${potionName}`;
-    },
-};
+//     addPotion(potionName) {
+//         return `Adding ${potionName}`;
+//     },
+// };
 
-console.log(atTheOldToad.addPotion("Invisibility"));
-console.log(atTheOldToad.addPotion("Power potion"));
+// console.log(atTheOldToad.addPotion("Invisibility"));
+// console.log(atTheOldToad.addPotion("Power potion"));
+
+//-----------------------------------------------------------------------------------------------------------------------
+
