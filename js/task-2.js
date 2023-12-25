@@ -1,20 +1,41 @@
-// `use strict`;
+ `use strict`;
 
-// const atTheOldToad = {
-//     potions: [],
+function calcAverageCalories(days) {
+    if (days.length === 0) {
+        return 0;
+    } else {
+        let allCalories = 0;
+        for (let sumCalories of days) {
+            allCalories += sumCalories.calories;
+        }
+        return allCalories;
+    }
+}
 
+console.log(
+  calcAverageCalories([
+    { day: "monday", calories: 3010 },
+    { day: "tuesday", calories: 3200 },
+    { day: "wednesday", calories: 3120 },
+    { day: "thursday", calories: 2900 },
+    { day: "friday", calories: 3450 },
+    { day: "saturday", calories: 3280 },
+    { day: "sunday", calories: 3300 }
+  ])
+); // 3180
 
-//     getPotions() {
-//         return "List of all available potions";
-//     },
+console.log(
+  calcAverageCalories([
+    { day: "monday", calories: 2040 },
+    { day: "tuesday", calories: 2270 },
+    { day: "wednesday", calories: 2420 },
+    { day: "thursday", calories: 1900 },
+    { day: "friday", calories: 2370 },
+    { day: "saturday", calories: 2280 },
+    { day: "sunday", calories: 2610 }
+  ])
+); // 2270
 
-//     addPotion(potionName) {
-//         return `Adding ${potionName}`;
-//     },
-// };
-
-// console.log(atTheOldToad.addPotion("Invisibility"));
-// console.log(atTheOldToad.addPotion("Power potion"));
-
-//-----------------------------------------------------------------------------------------------------------------------
-
+console.log(
+  calcAverageCalories([])
+); // 0
